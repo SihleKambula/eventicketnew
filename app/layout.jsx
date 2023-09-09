@@ -9,10 +9,13 @@ export const metadata = {
   description: "Made by K-Innovation",
 };
 
+const bgColor = {
+  backgroundColor: "#F5F5F5",
+};
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body style={[{ backgroundColor: "#F5F5F5" }, rubik.className]}>
+      <body style={bgColor} className={rubik.className}>
         <ThemeRegistry options={{ key: "mui" }}>
           <Navbar />
           {children}
