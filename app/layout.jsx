@@ -1,4 +1,6 @@
 import { Rubik } from "next/font/google";
+import ThemeRegistry from "./ThemeRegistry";
+import Navbar from "@/components/Navbar";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -10,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={rubik.className}>{children}</body>
+      <body style={[{ backgroundColor: "#F5F5F5" }, rubik.className]}>
+        <ThemeRegistry options={{ key: "mui" }}>
+          <Navbar />
+          {children}
+        </ThemeRegistry>
+      </body>
     </html>
   );
 }
