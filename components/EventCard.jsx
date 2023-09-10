@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 //Component
-export default function EventCard({ event }) {
+export default function EventCard({ event, id }) {
   const {
     startPrice,
     eventLocation,
@@ -18,9 +18,8 @@ export default function EventCard({ event }) {
     eventName,
     imageUrl,
   } = event;
-  const id = eventName;
   return (
-    <Link href={`/${id}`} style={{ textDecoration: "none" }}>
+    <Link href={`/event/${id}`} style={{ textDecoration: "none" }}>
       <Card sx={{ maxWidth: 345 }} elevation={0}>
         <CardActionArea>
           <CardMedia
