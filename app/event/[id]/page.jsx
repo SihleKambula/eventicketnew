@@ -1,11 +1,6 @@
 //material UI
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import CardActionArea from "@mui/material/CardActionArea";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 
 //firebase
 import { db } from "@/firebase/config";
@@ -42,6 +37,7 @@ export default async function Page({ params }) {
                 startTime={event.startTime}
                 endTime={event.endTime}
                 eventLocation={event.eventLocation}
+                id={id}
               />
             </Grid>
           </Grid>

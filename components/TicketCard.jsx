@@ -11,12 +11,16 @@ import Button from "@mui/material/Button";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 
+// zustand
+import Link from "next/link";
+
 export default function TicketCard({
   startPrice,
   date,
   startTime,
   endTime,
   eventLocation,
+  id,
 }) {
   return (
     <Card
@@ -72,9 +76,11 @@ export default function TicketCard({
             alignContent: "center",
           }}
         >
-          <Button variant='contained'>
-            <Typography>Tickets</Typography>
-          </Button>
+          <Link href={`/event/${id}/ticket`}>
+            <Button variant='contained'>
+              <Typography>Tickets</Typography>
+            </Button>
+          </Link>
         </Box>
       </CardContent>
     </Card>
